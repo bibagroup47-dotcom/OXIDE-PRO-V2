@@ -1,0 +1,23 @@
+name: Build OXIDE PRO APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download project
+        uses: actions/checkout@v4
+
+      - name: Build APK
+        run: |
+          mkdir -p output
+          echo "HTML menu project is ready"
+          zip -r output/OXIDE-PRO.zip index.html
+
+      - name: Upload project
+        uses: actions/upload-artifact@v4
+        with:
+          name: OXIDE-PRO
+          path: output/OXIDE-PRO.zip
