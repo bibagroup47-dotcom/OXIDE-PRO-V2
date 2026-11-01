@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OXIDE PRO</title>
+<style>
+body {
+ background:#080b12;
+ color:white;
+ font-family:Arial;
+ padding:20px;
+}
+.menu {
+ background:#151c29;
+ border:1px solid #26364c;
+ border-radius:15px;
+ padding:20px;
+ max-width:350px;
+ margin:auto;
+}
+h2 {color:#00d9ff;text-align:center}
+.item {
+ display:flex;
+ justify-content:space-between;
+ padding:14px;
+ border-bottom:1px solid #293548;
+}
+button {
+ background:#087fce;
+ color:white;
+ border:0;
+ border-radius:8px;
+ padding:8px 16px;
+}
+</style>
+</head>
+<body>
+<div class="menu">
+<h2>OXIDE PRO V1</h2>
+<div class="item">ESP <button onclick="toggle(this)">OFF</button></div>
+<div class="item">PLAYER BOX <button onclick="toggle(this)">OFF</button></div>
+<div class="item">NAME ESP <button onclick="toggle(this)">OFF</button></div>
+<div class="item">DISTANCE <button onclick="toggle(this)">OFF</button></div>
+<div class="item">AIM ASSIST <button onclick="toggle(this)">OFF</button></div>
+</div>
+<script>
+function toggle(btn) {
+ btn.textContent =
+ btn.textContent === "OFF" ? "ON" : "OFF";
+}
+</script>
+</body>
+</html>
